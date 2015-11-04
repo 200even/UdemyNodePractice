@@ -1,0 +1,10 @@
+{
+  "name": "UdemyNodePractice",
+  "version": "0.0.0",
+  "description": "UdemyNodePractice",
+  "main": "server.js",
+  "author": {
+    "name": "sferguson",
+    "email": ""
+  }
+}
