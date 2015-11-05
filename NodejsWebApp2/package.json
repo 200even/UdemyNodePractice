@@ -1,0 +1,15 @@
+{
+  "name": "NodejsWebApp2",
+  "version": "0.0.0",
+  "description": "NodejsWebApp2",
+  "main": "app.js",
+  "author": {
+    "name": "sferguson",
+    "email": "esfergus@gmail.com"
+  },
+  "dependencies": {
+    "zipcode": "0.1.1",
+    "express": "4.13.3",
+    "jade": "1.11.0"
+  }
+}

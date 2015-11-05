@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "ExpressApp1", "ExpressApp1\ExpressApp1.njsproj", "{EE83278F-DD56-4B76-A58B-E7DC74DFF327}"
 EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "NodejsWebApp1", "NodejsWebApp1\NodejsWebApp1.njsproj", "{AC7D56D9-2939-45E0-AEF2-30CED17AB86D}"
+EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "NodejsWebApp2", "NodejsWebApp2\NodejsWebApp2.njsproj", "{40766DD3-83F7-45FC-97FD-E9371E82E332}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{EE83278F-DD56-4B76-A58B-E7DC74DFF327}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE83278F-DD56-4B76-A58B-E7DC74DFF327}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE83278F-DD56-4B76-A58B-E7DC74DFF327}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC7D56D9-2939-45E0-AEF2-30CED17AB86D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC7D56D9-2939-45E0-AEF2-30CED17AB86D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC7D56D9-2939-45E0-AEF2-30CED17AB86D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC7D56D9-2939-45E0-AEF2-30CED17AB86D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40766DD3-83F7-45FC-97FD-E9371E82E332}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40766DD3-83F7-45FC-97FD-E9371E82E332}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40766DD3-83F7-45FC-97FD-E9371E82E332}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40766DD3-83F7-45FC-97FD-E9371E82E332}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
