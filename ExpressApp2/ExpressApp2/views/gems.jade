@@ -1,0 +1,45 @@
+﻿extends layout
+
+block content
+    div(ng-controller="StoreCtrl as store")
+        div(class="product row" ng-repeat="product in store.products")
+            h1 {{product.name}}
+            h2 {{product.price | currency}}
+            section(ng-controller="PanelCtrl as panel").panel
+                ul.nav.nav-pills
+                    li(ng-class="{ active: panel.isSet(1) }") 
+                        a(href ng-click="panel.setTab(1)") Description
+                    li(ng-class="{ active: panel.isSet(2) }")
+                        a(href ng-click="panel.setTab(2)") Specifications
+                    li(ng-class="{ active: panel.isSet(3) }")
+                        a(href ng-click="panel.setTab(3)") Reviews
+                div(ng-show="panel.isSet(1)")
+                    h4 Description
+                    blockquote {{product.description}}
+                div(ng-show="panel.isSet(2)")
+                    h4 Shine
+                    blockquote {{product.shine}}
+                div(ng-show="panel.isSet(3)")
+                    h4 Reviews
+                    blockquote(ng-repeat="review in product.reviews | limitTo: 3")
+                        b {{ review.stars }} Stars: 
+                        {{ review.body }}
+                        br
+                        cite -- {{ review.author }}
+                    form(name="reviewForm" ng-controller="ReviewCtrl as reviewCtrl" ng-submit="reviewCtrl.addReview(product) novalidate")
+                        blockquote
+                            b {{ reviewCtrl.review.stars }} Stars: 
+                            {{ reviewCtrl.review.body }}
+                            cite -- {{ reviewCtrl.review.author }}
+                        select(ng-model="reviewCtrl.review.stars")
+                            option(value="1") 1 star
+                            option(value="2") 2 star
+                            option(value="3") 3 star
+                            option(value="4") 4 star
+                        fieldset.form-group
+                            textarea(ng-model="reviewCtrl.review.body" placeholder="Write a short review of this product..." title="Review").form-control
+                        fieldset.form-group
+                            input(type="email" ng-model="reviewCtrl.review.author" placeholder="jimmyDean@example.org" title="Email")
+                        fieldset.form-group
+                            input(type="submit" value="Submit")
+                    

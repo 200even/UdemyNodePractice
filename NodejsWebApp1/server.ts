@@ -1,6 +1,7 @@
-﻿var express = require('express');
+﻿///
+var express = require('express');
 var app = express();
-var http = require('http');
+import http = require('http');
 var server = http.createServer(app);
 var io = require('socket.io').listen(server);
 var redis = require('redis');
