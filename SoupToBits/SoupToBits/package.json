@@ -1,0 +1,10 @@
+{
+  "name": "SoupToBits",
+  "version": "0.0.0",
+  "description": "SoupToBits",
+  "main": "server.js",
+  "author": {
+    "name": "sferguson",
+    "email": ""
+  }
+}

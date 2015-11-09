@@ -5,11 +5,14 @@
   "main": "app.js",
   "author": {
     "name": "sferguson",
-    "email": ""
+    "email": "sferguson@privacystar.com"
   },
   "dependencies": {
     "express": "3.4.4",
     "jade": "*",
-    "stylus": "*"
+    "stylus": "*",
+    "redis": "^2.3.0",
+    "axon": "^2.0.2",
+    "underscore": "^1.8.3"
   }
 }

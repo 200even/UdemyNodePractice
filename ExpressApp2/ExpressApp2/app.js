@@ -1,12 +1,13 @@
-﻿
-/**
- * Module dependencies.
- */
+﻿'use strict';
+//Module dependencies.
 
 var express = require('express');
 var routes = require('./routes');
+var badges = require('./routes/badges');
 var http = require('http');
 var path = require('path');
+var axon = require('axon');
+var redis = require('./lib/redis');
 
 var app = express();
 
@@ -32,7 +33,15 @@ app.get('/', routes.index);
 app.get('/about', routes.about);
 app.get('/contact', routes.contact);
 app.get('/gems', routes.gems);
+app.post('/', badges.save, badges.send, function (req, res) {
+    res.send('\ndone\n\n');
+});
 
 http.createServer(app).listen(app.get('port'), function () {
     console.log('Express server listening on port ' + app.get('port'));
 });
+
+redis.on('connect', function () {
+    console.log("Redis connected");
+})
+
